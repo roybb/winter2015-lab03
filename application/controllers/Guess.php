@@ -20,9 +20,11 @@ class Guess extends Application {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
         $source = $this->quotes->get(4);
-        //foreach ($source as $record) {
+  
+        //fill array with author quote info
         $authors = array (array('who' => $source['who'], 'mug' => $source['mug'], 'href' => $source['where'], 'what' => $source['what']));
-        //}
+ 
+        //pass array to our view
         $this->data['authors'] = $authors;
 
         $this->render();
