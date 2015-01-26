@@ -40,6 +40,14 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+$route["last"] = "last/last";
+$route['sleep'] = "first";
+$route['lock/:any'] = "welcome";
+$route['show/:num'] = "first";
+$route['dunno'] = "guess";
+$route['([a-z]+)/bingo'] = "bingo";
+$route['comp(\d+)/:any'] = "bingo";
+
 
 
 /* End of file routes.php */
